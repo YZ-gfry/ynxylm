@@ -1,0 +1,23 @@
+.ck{
+    margin-top: 40px;
+    background: white;
+    opacity: 0.7;
+}
+
+.gg{
+    margin-top: 60px;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ck p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    color: black;
+}
