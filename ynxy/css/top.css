@@ -1,0 +1,154 @@
+/*顶部菜单开始*/
+/* 设置header的宽度，并使其水平居中 */
+#header {
+    width: 990px; /* 设置宽度为990像素 */
+    margin: 0 auto; /* 设置上下外边距为0，左右外边距自动，以实现水平居中 */
+}
+/* 设置顶部菜单的背景图像 */
+.topmenu { /* 设置背景图像，且图像不重复 */
+    background-image: url("../images/top_bar.png");
+    font-weight: bold;
+    height: 24px; /* 设置高度为24像素 */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+/* 设置欢迎信息的样式 */
+.welcome {
+    float: left; /* 向左浮动 */
+    width: 320px; /* 设置宽度为320像素 */
+    padding-left: 50px; /* 设置左内边距为50像素 */
+    line-height: 24px; /* 设置行高为24像素，通常用于垂直居中单行文本 */
+}
+
+/* 设置主菜单的样式 */
+.menu {
+    float: left; /* 向左浮动 */
+    width: 80px; /* 设置宽度为100像素 */
+    line-height: 22px; /* 设置行高为22像素 */
+    position: relative; /* 设置定位方式为相对定位 */
+    z-index: 666; /* 设置堆叠顺序为666，用于控制元素在z轴上的显示顺序 */
+}
+
+/* 设置具有下拉功能的菜单项的样式 */
+.menu li.drop {
+    background: url(../images/putdown.png) no-repeat 68px center; /* 设置背景图像，且图像在68像素处不重复，并垂直居中 */
+    width: 85px; /* 设置宽度为85像素 */
+    text-decoration: none; /* 移除文本装饰，如下划线 */
+    text-align: left; /* 设置文本左对齐 */
+    text-indent: 10px; /* 设置文本缩进为6像素 */
+    padding-left: 1px; /* 设置左内边距为1像素 */
+}
+
+/* 设置下拉菜单项中链接的悬停样式 */
+.menu li.drop a:hover {
+    text-decoration: none; /* 移除文本装饰，如下划线 */
+}
+
+/* 设置右侧菜单的样式，与.menu类似但宽度不同 */
+.menur {
+    font-weight: bold;
+    font-family: "宋书";
+    font-size: 20px;
+    float: left; /* 向左浮动 */
+    width: 900px; /* 设置宽度为500像素 */
+    line-height: 22px; /* 设置行高为22像素 */
+    position: relative; /* 设置定位方式为相对定位 */
+    z-index: 666; /* 设置堆叠顺序为666 */
+}
+
+/* 设置右侧菜单项的样式，与.menu li类似 */
+.menur li {
+    margin: 1px 30px 0; /* 设置上外边距为1像素，左右外边距为8像素，下外边距为0 */
+    display: inline; /* 设置元素为内联显示 */
+    text-align:center; /* 设置文本居中对齐 */
+    padding-top: 1px; /* 设置上内边距为1像素 */
+    height: 22px; /* 设置高度为22像素 */
+    float: left; /* 向左浮动 */
+}
+
+/* 设置特定菜单项的样式，通常用于高亮或特殊标记 */
+.menu li.index {
+    border: 1px solid #CCC; /* 设置边框为1像素实线，颜色为#CCC */
+    border-bottom: none; /* 移除下边框 */
+    width: 83px; /* 设置宽度为83像素 */
+    background: #fff url(../images/putdown.png) no-repeat 67px 6px; /* 设置背景颜色为白色，并添加背景图像，图像在67像素处不重复，并稍微偏移 */
+    padding: 0; /* 设置内边距为0 */
+    margin-right: 9px; /* 设置右外边距为9像素 */
+}
+
+/* 设置特定菜单项中链接的文本颜色 */
+.menu li.index a {
+    color: #000; /* 设置文本颜色为黑色 */
+}
+/*顶部菜单----弹出菜单*/
+/* 下拉菜单容器的样式 */
+.droplist {
+    display: none; /* 默认隐藏下拉菜单 */
+    float: left; /* 向左浮动 */
+    clear: both; /* 清除浮动，确保此元素下方没有其他浮动元素 */
+    padding: 10px 0; /* 设置上下内边距为10像素，左右内边距为0 */
+    width: 80px; /* 针对旧版IE浏览器的宽度设置（hack） */
+    border: 1px solid #000000; /* 设置边框为1像素实线，颜色为#ccc */
+    border-top: none; /* 移除上边框 */
+    background: #ffffff; /* 设置背景颜色为白色 */
+    position: absolute; /* 设置定位方式为绝对定位 */
+    left: 8px; /* 设置距离左边8像素 */
+    top: 24px; /* 设置距离顶部24像素 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    z-index: 999; /* 设置堆叠顺序为999，确保此元素在其他元素之上显示 */
+}
+
+/* 下拉菜单中链接的悬停样式 */
+.droplist a:hover {
+    text-decoration: none; /* 移除文本装饰，如下划线 */
+    color: black;
+}
+
+/* 下拉菜单项的样式 */
+.droplist li {
+    margin-top: 4px;
+    clear: both; /* 清除浮动 */
+    white-space: nowrap; /* 禁止文本换行 */
+    width: 80px; /* 针对旧版IE浏览器的宽度设置（hack） */
+    background: white; /* 设置背景图像，图像在左侧24像素处重复 */
+    height: 20px; /* 设置高度为25像素 */
+    font-family: "宋体"; /* 设置字体为宋体 */
+    font-size: 5px; /* 设置字体大小为12像素 */
+    line-height: 24px; /* 设置行高为24像素 */
+}
+
+/* 下拉菜单项中链接的样式 */
+.droplist li a {
+    margin: 0; /* 设置外边距为0 */
+    padding: 0; /* 设置内边距为0 */
+    text-align: left; /* 设置文本左对齐 */
+    height:20px; /* 设置高度为25像素 */
+    display: block; /* 设置元素为块级显示 */
+    background: white; /* 设置背景图像，图像在左侧10像素处不重复，并垂直居中 */
+    text-indent: 25px; /* 设置文本缩进为25像素 */
+}
+
+/* 下拉菜单项悬停时的样式 */
+.droplist li.hover {
+    background: white /* 设置悬停时的背景图像，图像重复 */
+}
+
+/* 下拉菜单项悬停时链接的样式 */
+.droplist li.hover a {
+    border-bottom: 1px solid #ccc; /* 设置下边框为1像素实线，颜色为#ccc */
+    height: 20px; /* 设置高度为24像素 */
+    background: white; /* 设置背景图像，图像在左侧20像素处不重复，并垂直居中 */
+    text-indent: 20px; /* 设置文本缩进为35像素 */
+}
+
+/*顶部菜单结束*/
+
+.enn{
+    font-family: "宋书";
+    font-size: 5px;
+    justify-content: center;
+    display: flex;
+}
+
+
